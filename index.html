@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Starbucks Website Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+<body>
+	<section>
+	<div class="circle"></div>
+	  <header>
+	 	<a href="#"><img src="logo.png" class="logo"></a>
+	 	<div class="toggle" onclick="toggleMenu();"></div>
+	 	 <ul class="navigation"> 
+	 	  <li><a href="#">Home</a></li>
+	 	  <li><a href="#">Menu</a></li>
+	 	  <li><a href="#">What's New</a></li>
+	 	  <li><a href="#">Contact</a></li>
+	 	 </ul>
+	  </header>
+	   <div class="content">
+	 	   <div class="textbox">
+	 		  <h2>It's not just coffee<br>It's <span>Starbucks</span></h2>
+	 		   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque leo sem, sodales eu blandit sit amet, commodo a arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in lorem in nisi convallis aliquet. Duis dignissim porta libero, ac tempor orci laoreet eget. </p>
+	 		    <a href="#">Learn More</a>
+	 	   </div>
+	      <div class="imgbox">
+	 	    <img src="77325-frappuccino-drink-chocolate-starbucks-matcha-white.png" class="Starbucks">
+	      </div>
+	    </div>
+	     <ul class="variations">
+	 	    <li><img src="77325-frappuccino-drink-chocolate-starbucks-matcha-white.png" onclick="imgSlider('77325-frappuccino-drink-chocolate-starbucks-matcha-white.png');changeCircleColor('#017143')"></li>
+	    	<li><img src="62115-tea-coffee-drink-starbucks-latte-free-download-image.png" onclick="imgSlider('62115-tea-coffee-drink-starbucks-latte-free-download-image.png');changeCircleColor('#eb7495')"></li>
+	    	<li><img src="62120-coffee-frappuccino-drink-latte-starbucks-unicorn.png" onclick="imgSlider('62120-coffee-frappuccino-drink-latte-starbucks-unicorn.png');changeCircleColor('#d752b1')"></li>
+	     </ul>
+	     <ul class="social">
+	     	<li><a href="#"><img src="facebook.png"></a></li>
+	     	<li><a href="#"><img src="instagram.png"></a></li>
+	     	<li><a href="#"><img src="twitter.png"></a></li>
+	     </ul>
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything){
+			document.querySelector('.Starbucks').src = anything;
+		}
+
+		function changeCircleColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background = color; 
+		}
+
+		function toggleMenu(){
+			var menuToggle = document.querySelector('.toggle');
+			var navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+		}
+	</script>
+</body>
+</html>
